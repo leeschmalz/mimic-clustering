@@ -3,7 +3,6 @@ import math
 def distance(patient1, patient2):
     similarity = 0
 
-    # iterate through the patient with less codes first
     for ix1, dx1 in enumerate(patient1):
         if dx1 not in patient2:
             continue

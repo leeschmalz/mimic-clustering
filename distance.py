@@ -1,6 +1,12 @@
 import math
 
 def distance(patient1, patient2):
+    '''
+    Calculate the similarity between the diagnosis codes of two patient encounters. 
+    Weights contribution of ICD code similarity by line order.
+
+    See Alcaide et. al.
+    '''
     similarity = 0
 
     for ix1, dx1 in enumerate(patient1):
@@ -13,7 +19,7 @@ def distance(patient1, patient2):
     return similarity
 
 if __name__ == "__main__":
-    # Example from Alcaide et. al. paper. Should be 0.56
+    # Example from Alcaide et. al. Similarity should be 0.56.
     patient1 = ['99662', '99591', '5990', '4019']
     patient2 = ['4329', '43491', '99702', '99591', '5990', '4019']
 

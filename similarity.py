@@ -61,7 +61,7 @@ if __name__ == "__main__":
     possible_edges = make_list_of_possible_edges(df, condition='99591') # 99591 is sepsis
     
     test2 = round(possible_edges[(possible_edges.hadm1 == '115057') & (possible_edges.hadm2 == '117154') |
-                               (possible_edges.hadm1 == '117154') & (possible_edges.hadm2 == '115057')].
+                                 (possible_edges.hadm1 == '117154') & (possible_edges.hadm2 == '115057')].
                   similarity.values[0], 2)
     
     print(f'Test 1: {test1} | passed: {test1==0.56}' )

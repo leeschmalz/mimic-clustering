@@ -1,4 +1,5 @@
 import math
+import pandas as pd
 
 def similarity(patient1, patient2):
     '''
@@ -49,8 +50,6 @@ if __name__ == "__main__":
     # Patient A: '115057'
     # Patient B: '117154'
     # similarity: 0.56
-
-    import pandas as pd
 
     # test similarity function
     patientA = ['99662', '99591', '5990', '4019']

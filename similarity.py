@@ -28,7 +28,9 @@ def make_list_of_possible_edges(data, condition):
 
     # filter to patients with condition of interest
     data.HADM_ID = data.HADM_ID.astype(str)
-    hadm_list = list(data[data.ICD9_CODE == condition]['HADM_ID'])
+    hadm_list = list(set(list(data[data.ICD9_CODE == condition]['HADM_ID'])))
+    if condition == 'all':
+        hadm_list = list(set(list(data['HADM_ID'])))
     data = data[data.HADM_ID.isin(hadm_list)]
 
     # create a dictionary of patients and their diagnoses

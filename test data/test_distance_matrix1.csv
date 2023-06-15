@@ -1,0 +1,11 @@
+hadm1,hadm2,distance
+A,B,1
+A,C,2
+A,D,7
+A,E,2
+B,C,6
+B,D,3
+B,E,4
+C,D,1
+C,E,6
+D,E,5

@@ -74,10 +74,11 @@ def make_minimum_spanning_tree(distance_matrix):
 
     return mst.edges, distance_matrix
 
+
 if __name__ == "__main__":
     import pandas as pd
-    distance1 = pd.read_csv('./test_distance_matrix1.csv')
-    distance2 = pd.read_csv('./test_distance_matrix2.csv')
+    distance1 = pd.read_csv('./test data/test_distance_matrix1.csv')
+    distance2 = pd.read_csv('./test data/test_distance_matrix2.csv')
 
     tree1, _ = make_minimum_spanning_tree(distance1)
     tree2, _ = make_minimum_spanning_tree(distance2)
